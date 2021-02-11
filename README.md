@@ -2,7 +2,7 @@
 
 ## React Apps
 
-### 1. Install Create React App
+### 1. Initialize Create React App
 
 #### Standard CRA
 
@@ -20,8 +20,12 @@ npx create-react-app my-app --template typescript
 
 #### package.json
 
-Add and run script.
+Add and run setup script.
 
 ```
-"setup": "npm install @material-ui/core @material-ui/icons"
+mui": "npm install @material-ui/core @material-ui/icons",
+dir": "cd public & rm *.png & cd ../src & rm logo.svg setupTests.js App.test.js index.css & mkdir components & cd ../",
+setup": "npm run mui & npm run dir"
 ```
+
+### 3. Create App Theme
