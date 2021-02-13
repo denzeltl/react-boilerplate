@@ -2,42 +2,37 @@
 
 ## React Apps
 
-### 1. Initialize Create React App
+### Standard CRA
 
-#### Standard CRA
+#### 1. Initialize Create React App
 
-```
-npx create-react-app my-app
-```
-
-#### With TypeScript
-
-```
-npx create-react-app my-app --template typescript
+```sh
+$ npx create-react-app my-app
 ```
 
-### 2. Install Material UI and Setup Directories
+#### 2. Install Material UI and Setup Directories
 
-#### With Bash
+##### With PowerShell
 
 ```json
 "mui": "npm install @material-ui/core @material-ui/icons",
-"dir": "rm public/*.png src/logo.svg src/setupTests.js src/App.test.js src/index.css & mkdir src/components",
-"setup": "npm run mui & npm run dir",
+"del": "del public\\*.png, src\\logo.svg, src\\setupTests.js, src\\App.test.js, src\\index.css",
+"dir": "mkdir src\\components",
+"setup": "npm run mui & npm run del & npm run dir"
 ```
 
-#### With PowerShell
+##### With Bash
 
 ```json
 "mui": "npm install @material-ui/core @material-ui/icons",
-"dir": "del public\\*.png, src\\logo.svg, src\\setupTests.js, src\\App.test.js, src\\index.css",
-"com": "mkdir src\\components",
-"setup": "npm run mui & npm run dir & npm run com"
+"del": "rm public/*.png src/logo.svg src/setupTests.js src/App.test.js src/index.css",
+"dir": "cd src && mkdir components",
+"setup": "npm run mui & npm run del & npm run dir"
 ```
 
-### 3. Create App Theme and Add Styles
+#### 3. Create App Theme and Add Styles
 
-#### index.js
+##### index.js
 
 ```js
 import React from "react";
@@ -50,10 +45,10 @@ import reportWebVitals from "./reportWebVitals";
 const theme = createMuiTheme({
     palette: {
         primary: {
-            main: "#1f7cbf",
+            main: "#267fa6",
         },
         secondary: {
-            main: "#e88d25",
+            main: "#eb7628",
         },
         success: {
             main: "#42b347",
@@ -66,9 +61,7 @@ const theme = createMuiTheme({
         },
     },
     typography: {
-        fontFamily: ["Lato", "Roboto", "Helvetica", "Arial", "sans-serif"].join(
-            ","
-        ),
+        fontFamily: ["Lato", "Roboto", "Helvetica", "Arial", "sans-serif"].join(","),
     },
     breakpoints: {
         values: {
@@ -94,7 +87,38 @@ ReactDOM.render(
 reportWebVitals();
 ```
 
-#### App.css
+##### App.js
+
+```js
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography } from "@material-ui/core";
+import "./App.css";
+
+const useStyles = makeStyles((theme) => ({
+    headerTitle: {
+        background: theme.palette.primary.main,
+        borderBottom: `0.5rem solid ${theme.palette.secondary.main}`,
+        textAlign: "center",
+        padding: "2rem 0",
+    },
+}));
+function App() {
+    const classes = useStyles();
+    return (
+        <div className={classes.root}>
+            <main className={classes.main}>
+                <Typography variant="h3" component="h1" className={classes.headerTitle}>
+                    Create React App
+                </Typography>
+            </main>
+        </div>
+    );
+}
+export default App;
+```
+
+##### App.css
 
 ```css
 * {
