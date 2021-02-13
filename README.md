@@ -355,3 +355,9 @@ a {
 ```
 
 </details>
+
+---
+
+### To Do:
+
+-   Add website section (SSG/SSR)
