@@ -1,18 +1,22 @@
-# React Boilerplate
+<div align="center">
+<h1>React Boilerplate</h1>
+</div>
 
-## React Apps
+## Web Apps
 
-### Standard CRA
+<details>
 
-#### 1. Initialize Create React App
+<summary><b>CRA</b></summary>
+
+### 1. Initialize Create React App
 
 ```sh
 $ npx create-react-app my-app
 ```
 
-#### 2. Install Material UI and Setup Directories
+### 2. Install Material UI and Setup Directories
 
-##### With PowerShell
+With PowerShell:
 
 ```json
 "mui": "npm install @material-ui/core @material-ui/icons",
@@ -21,7 +25,7 @@ $ npx create-react-app my-app
 "setup": "npm run mui & npm run del & npm run dir"
 ```
 
-##### With Bash
+With Bash:
 
 ```json
 "mui": "npm install @material-ui/core @material-ui/icons",
@@ -30,9 +34,9 @@ $ npx create-react-app my-app
 "setup": "npm run mui & npm run del & npm run dir"
 ```
 
-#### 3. Create App Theme and Add Styles
+### 3. Create App Theme and Add Styles
 
-##### index.js
+index.js
 
 ```js
 import React from "react";
@@ -87,7 +91,7 @@ ReactDOM.render(
 reportWebVitals();
 ```
 
-##### App.js
+App.js
 
 ```js
 import React from "react";
@@ -118,7 +122,7 @@ function App() {
 export default App;
 ```
 
-##### App.css
+App.css
 
 ```css
 * {
@@ -170,3 +174,5 @@ a {
     text-decoration: none;
 }
 ```
+
+</details>
