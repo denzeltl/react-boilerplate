@@ -199,22 +199,30 @@ $ npx create-react-app my-app --template typescript
 
 ### 2. Install Material UI and Setup Directories
 
-With PowerShell:
+#### Paste on package.json
+
+PowerShell:
 
 ```json
 "mui": "npm install @material-ui/core @material-ui/icons",
-"del": "del public\\*.png, src\\logo.svg, src\\setupTests.ts, src\\App.test.tsx, src\\index.css",
+"del": "del public\\*.png, src\\logo.svg, src\\setupTests.js, src\\App.test.js, src\\index.css",
 "dir": "mkdir src\\components",
 "setup": "npm run mui & npm run del & npm run dir"
 ```
 
-With Bash:
+Bash:
 
 ```json
 "mui": "npm install @material-ui/core @material-ui/icons",
-"del": "rm public/*.png src/logo.svg src/setupTests.ts src/App.test.tsx src/index.css",
+"del": "rm public/*.png src/logo.svg src/setupTests.js src/App.test.js src/index.css",
 "dir": "cd src && mkdir components",
 "setup": "npm run mui & npm run del & npm run dir"
+```
+
+#### Run setup script
+
+```sh
+$ npm run setup
 ```
 
 ### 3. Create App Theme and Add Styles
