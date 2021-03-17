@@ -267,6 +267,13 @@ const theme = createMuiTheme({
             xl: 1200,
         },
     },
+    overrides: {
+        MuiButton: {
+            root: {
+                textTransform: "capitalize",
+            },
+        },
+    },
 });
 
 ReactDOM.render(
