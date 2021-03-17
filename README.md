@@ -205,7 +205,7 @@ PowerShell:
 
 ```json
 "mui": "npm install @material-ui/core @material-ui/icons",
-"del": "del public\\*.png, src\\logo.svg, src\\setupTests.js, src\\App.test.js, src\\index.css",
+"del": "del public\\*.png, src\\logo.svg, src\\setupTests.ts, src\\App.test.tsx, src\\index.css",
 "dir": "mkdir src\\components",
 "setup": "npm run mui & npm run del & npm run dir"
 ```
@@ -214,7 +214,7 @@ Bash:
 
 ```json
 "mui": "npm install @material-ui/core @material-ui/icons",
-"del": "rm public/*.png src/logo.svg src/setupTests.js src/App.test.js src/index.css",
+"del": "rm public/*.png src/logo.svg src/setupTests.ts src/App.test.tsx src/index.css",
 "dir": "cd src && mkdir components",
 "setup": "npm run mui & npm run del & npm run dir"
 ```
@@ -294,15 +294,16 @@ const useStyles = makeStyles((theme) => ({
     root: {},
     main: {},
     headerTitle: {
-        background: theme.palette.primary.main,
-        borderBottom: `0.5rem solid ${theme.palette.secondary.main}`,
         textAlign: "center",
-        padding: "2rem 0",
+        padding: "3rem 0",
     },
 }));
 
-function App() {
+interface AppProps {}
+
+const App: React.FC<AppProps> = () => {
     const classes = useStyles();
+
     return (
         <div className={classes.root}>
             <main className={classes.main}>
@@ -312,7 +313,7 @@ function App() {
             </main>
         </div>
     );
-}
+};
 
 export default App;
 ```
