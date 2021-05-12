@@ -14,6 +14,11 @@
 $ npx create-react-app my-app
 ```
 
+Or if app will be PWA
+```sh
+$ npx create-react-app my-app --template cra-template-pwa
+```
+
 ### 2. Install Material UI and Setup Directories
 
 #### Paste on package.json
@@ -195,6 +200,11 @@ a {
 
 ```sh
 $ npx create-react-app my-app --template typescript
+```
+
+Or if app will be PWA
+```sh
+$ npx create-react-app my-app --template cra-template-pwa-typescript
 ```
 
 ### 2. Install Material UI and Setup Directories
