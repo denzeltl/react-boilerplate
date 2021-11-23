@@ -54,12 +54,12 @@ index.js
 ```js
 import React from "react";
 import ReactDOM from "react-dom";
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const theme = createMuiTheme({
+const theme = createTheme({
     palette: {
         primary: {
             main: "#267fa6",
